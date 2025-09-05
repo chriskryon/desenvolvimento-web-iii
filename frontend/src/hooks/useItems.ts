@@ -49,6 +49,7 @@ export const useItems = () => {
 		}
 	};
 
+	// biome-ignore lint/correctness/useExhaustiveDependencies: <explanation>
 	useEffect(() => {
 		fetchItems();
 	}, []);
