@@ -1,0 +1,121 @@
+@import "tailwindcss";
+
+:root {
+  --font-family-sans: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  --font-size-h1: 3.2em;
+  --line-height-h1: 1.1;
+  --radius: 0.625rem;
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+
+  /* simplified white/minimal palette */
+  --color-background: #ffffff;
+  --color-foreground: #25303a; /* slate-ish text */
+  --color-card: #ffffff;
+  --color-card-foreground: #25303a;
+  --color-popover: oklch(1 0 0);
+  --color-popover-foreground: oklch(0.147 0.004 49.25);
+  --color-primary: #364152;
+  --color-primary-foreground: #ffffff;
+  --color-secondary: #f3f4f6;
+  --color-secondary-foreground: #364152;
+  --color-muted: #f7fafc;
+  --color-muted-foreground: #6b7280;
+  --color-accent: #eef2ff;
+  --color-accent-foreground: #334155;
+  --color-destructive: #ef4444;
+  --color-border: #e6eef5;
+  --color-input: #ffffff;
+  --color-ring: #c7d2fe;
+  --color-chart-1: #60a5fa;
+  --color-chart-2: #7c3aed;
+  --color-chart-3: #06b6d4;
+  --color-chart-4: #f59e0b;
+  --color-chart-5: #ef4444;
+  --color-sidebar: #f8fafc;
+  --color-sidebar-foreground: #25303a;
+  --color-sidebar-primary: #364152;
+  --color-sidebar-primary-foreground: #ffffff;
+  --color-sidebar-accent: #eef2ff;
+  --color-sidebar-accent-foreground: #334155;
+  --color-sidebar-border: #e6eef5;
+  --color-sidebar-ring: #c7d2fe;
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+    outline-color: var(--color-ring);
+    outline-width: 2px;
+    outline-offset: 2px;
+  }
+
+  body {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+    min-width: 320px;
+    min-height: 100vh;
+    font-family: var(--font-family-sans);
+    line-height: 1.5;
+    font-weight: 400;
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+  }
+
+  h1 {
+    font-size: var(--font-size-h1);
+    line-height: var(--line-height-h1);
+  }
+
+  button {
+    border-radius: 8px;
+    border: 1px solid transparent;
+    padding: 0.6em 1.2em;
+    font-size: 1em;
+    font-weight: 500;
+    font-family: inherit;
+    background-color: #1a1a1a;
+    cursor: pointer;
+    transition: border-color 0.25s;
+  }
+
+  button:hover {
+    border-color: #646cff;
+  }
+
+  button:focus,
+  button:focus-visible {
+    outline: 4px auto -webkit-focus-ring-color;
+  }
+
+  a:hover {
+    color: #535bf2;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+
+  a:hover {
+    color: #747bff;
+  }
+
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+/* Estilos personalizados para glassmorphism */
+.glass {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.04);
+}
