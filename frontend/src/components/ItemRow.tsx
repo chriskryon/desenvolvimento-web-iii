@@ -50,7 +50,7 @@ export const ItemRow: FC<Props> = ({ item }) => {
             </>
           ) : (
             <>
-              <Button size="sm" onClick={() => setEditing(true)} className="h-6 w-6 p-0 bg-slate-600 hover:bg-slate-700 rounded text-xs">
+              <Button size="sm" onClick={() => setEditing(true)} className="h-6 w-6 p-0 bg-slate-600 hover:bg-slate-700 rounded text-xs text-white">
                 <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><title>Editar item</title><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" /></svg>
               </Button>
               <Button size="sm" onClick={handleRemove} className="h-6 w-6 p-0 bg-red-600 hover:bg-red-700 rounded text-xs text-white">
